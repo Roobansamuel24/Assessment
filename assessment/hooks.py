@@ -43,8 +43,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
+
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Lead" : "assessment/utils/js/lead.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -137,21 +138,23 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Lead": {
+		"validate": "assessment.assessment.utils.py.lead.validate",
+		
+	}
+}
 
 # Scheduled Tasks
 # ---------------
+scheduler_events = {
+    "cron": {
+        "* * * * *": [
+            "assessment.assessment.utils.py.event_notification.send_event_reminders"
+        ]
+    }
+}
 
-# scheduler_events = {
-# 	"all": [
-# 		"assessment.tasks.all"
-# 	],
 # 	"daily": [
 # 		"assessment.tasks.daily"
 # 	],

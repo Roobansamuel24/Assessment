@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-03 20:30:23.817860",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "city",
+  "temperature",
+  "weather_description",
+  "humidity",
+  "column_break_edmb",
+  "pressure",
+  "windspeed",
+  "timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "weather_description",
+   "fieldtype": "Data",
+   "label": "Weather Description"
+  },
+  {
+   "fieldname": "humidity",
+   "fieldtype": "Float",
+   "label": "Humidity"
+  },
+  {
+   "fieldname": "column_break_edmb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pressure",
+   "fieldtype": "Float",
+   "label": "Pressure"
+  },
+  {
+   "fieldname": "windspeed",
+   "fieldtype": "Float",
+   "label": "Wind Speed"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Timestamp"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-03 20:30:23.817860",
+ "modified_by": "Administrator",
+ "module": "Assessment",
+ "name": "Weather Data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
